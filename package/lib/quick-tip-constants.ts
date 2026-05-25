@@ -1,0 +1,1 @@
+export const QUICK_TIP_MAX_LENGTH = 140;

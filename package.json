@@ -1,0 +1,14 @@
+{
+  "name": "surviving-my-multiples-workspace",
+  "private": true,
+  "scripts": {
+    "predev": "node -e \"const fs=require('fs');const cp=require('child_process');const p='package/node_modules/next/package.json';if(!fs.existsSync(p)){cp.execSync('npm install --prefix ./package --no-audit --no-fund',{stdio:'inherit'});}else{console.log('Dependencies already installed.');}\"",
+    "dev": "npm run dev --prefix ./package",
+    "build": "npm run build --prefix ./package",
+    "prestart": "node -e \"const fs=require('fs');const cp=require('child_process');const p='package/node_modules/next/package.json';if(!fs.existsSync(p)){cp.execSync('npm install --prefix ./package --no-audit --no-fund',{stdio:'inherit'});}else{console.log('Dependencies already installed.');}cp.execSync('npm run build --prefix ./package',{stdio:'inherit'});\"",
+    "start": "npm run start --prefix ./package",
+    "product:prepare": "npm run product:prepare --prefix ./package",
+    "product:package": "npm run product:package --prefix ./package",
+    "product:bundle": "npm run product:bundle --prefix ./package"
+  }
+}

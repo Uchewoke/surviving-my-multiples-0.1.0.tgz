@@ -1,0 +1,42 @@
+{
+  "name": "surviving-my-multiples",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node ./node_modules/next/dist/bin/next dev",
+    "build": "next build --webpack --experimental-build-mode=compile",
+    "start": "next start",
+    "lint": "echo Linting is currently disabled for this template baseline.",
+    "product:prepare": "npm run build",
+    "product:package": "npm pack",
+    "product:bundle": "npm run product:prepare && npm run product:package"
+  },
+  "files": [
+    "app",
+    "components",
+    "lib",
+    "public",
+    "next.config.ts",
+    "next-env.d.ts",
+    "tsconfig.json",
+    "README.md",
+    "BACKEND_SETUP.md",
+    "DIGITAL_PRODUCT.md",
+    "LICENSE-DIGITAL-PRODUCT.md"
+  ],
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.3.0",
+    "next": "16.2.6",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "resend": "^6.12.3"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.6",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.1",
+    "eslint-config-next": "16.2.6",
+    "typescript": "5.9.3"
+  }
+}
